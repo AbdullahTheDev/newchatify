@@ -1039,6 +1039,7 @@ function messengerSearch(input) {
       dataType: "JSON",
       success: (data) => {
         setSearchLoading(false);
+        console.log(data);
         if (searchPage < 2) {
           $(".search-records").html(data.records);
         } else {

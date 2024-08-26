@@ -343,11 +343,14 @@ class MessagesController extends Controller
         if($records->total() < 1){
             $getRecords = '<p class="message-hint center-el"><span>Nothing to show.</span></p>';
         }
-        $getRecords = '<p class="message-hint center-el"><span>Nothing to show.</span></p>';
+        if(\Auth::user()->role != 'admin'){
+            $getRecords = '<p class="message-hint center-el"><span>Nothing to show.</span></p>';
+        }
+
         // send the response
         return Response::json([
             'records' => $getRecords,
-            'total' => 0,
+            'total' => $records->total(),
             'last_page' => $records->lastPage()
         ], 200);
     }

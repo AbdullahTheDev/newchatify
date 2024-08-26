@@ -284,15 +284,10 @@ class MessagesController extends Controller
         }
 
         return Response::json([
-            'records' => null,
-            'total' => 0,
+            'records' => $records->items(),
+            'total' => $records->total(),
             'last_page' => $records->lastPage()
         ], 200);
-        // return Response::json([
-        //     'records' => $records->items(),
-        //     'total' => $records->total(),
-        //     'last_page' => $records->lastPage()
-        // ], 200);
     }
 
     /**

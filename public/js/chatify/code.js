@@ -805,6 +805,9 @@ function sendDeleteConversationEvent() {
 function checkInternet(state, selector) {
   let net_errs = 0;
   const messengerTitle = $(".messenger-headTitle");
+
+  console.log(state);
+  console.log(selector);
   switch (state) {
     case "connected":
       if (net_errs < 1) {

@@ -1,90 +1,3 @@
-{{-- <x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
-
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ml-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout> --}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -274,54 +187,12 @@
     </header>
     <!-- Header End  -->
 
-
-
-    <section class="login">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="login-img">
-                        <img src="assets/images/big-logo.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <form method="POST" action="{{ route('login') }}" class="login-form form-group">
-                        @csrf
-                        <div class="login-form">
-                            <h1>Log in</h1>
-                        </div>
-                        <div>
-                            <label for="email">Email</label>
-                            <input type="email" name="email" value="{{ old('email') }}" id=""
-                                class="form-control">
-                            @if ($errors->has('email'))
-                                <small style="color: red;">{{ $errors->first('email') }}</small>
-                            @endif
-                        </div>
-                        <div class="">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" value="{{ old('password') }}" id=""
-                                class="form-control">
-                            @if ($errors->has('password'))
-                                <small style="color: red;">{{ $errors->first('password') }}</small>
-                            @endif
-                        </div>
-                        <button class="submit form-control">Login</button>
-                    </form>
-                </div>
-                <div class="col-md-3"></div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
+<div class="container py-5">
+    <div class="w-100 my-5">
+        <h1 class="text-center">Page Not Found <span style="color: rgb(6, 68, 184); text-decoration: underline">404</span></h1>
+        <a href="{{ route('home') }}" class="btn btn-primary my-2 d-flex" style="margin: auto; width: max-content;">Go To Homepage</a>
+    </div>
+</div>
     <!-- Footer Start  -->
     <footer class="footer">
         <div class="main-foot">

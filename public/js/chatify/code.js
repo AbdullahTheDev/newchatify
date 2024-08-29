@@ -41,6 +41,7 @@ const pusher = new Pusher(chatify.pusher.key, {
     },
   },
 });
+
 /**
  *-------------------------------------------------------------
  * Re-usable methods
